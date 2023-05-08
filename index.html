@@ -25,38 +25,19 @@
                 <input type="text" id="username" placeholder="Benutzername">
             </div>
             <div class="messages" id="messages">
+                <ul id="nachrichten">
 
+                </ul>
             </div>
             <div class="input">
                 <input type="text" id="input" placeholder="Nachricht">
-                <button id="submitButton">senden</button>
+                <button id="submitButton" onclick="updateMessages()">senden</button>
             </div>
         </div>
 
     </div>
 
-    <script type="module">
-
-        let messages = [
-            {
-                author: "Ding",
-                message: "Hallo zusammen"
-            },
-            {
-                author: "Dong",
-                message: "Hallo zurück"
-            }
-        ]
-
-        function updateMessages() {
-
-        }
-
-        function submitMessage() {
-
-        }
-
-        document.getElementById("submitButton").onclick = submitMessage;
+    <script src="script.js">
     </script>
 
 </body>
