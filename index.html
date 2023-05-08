@@ -22,7 +22,7 @@
     <div class="container">
         <div class="chat">
             <div class="header">
-                <input type="text" id="username" placeholder="Benutzername">
+                <input type="text" id="inputauthor" placeholder="Benutzername">
             </div>
             <div class="messages" id="messages">
                 <ul id="nachrichten">
@@ -30,8 +30,8 @@
                 </ul>
             </div>
             <div class="input">
-                <input type="text" id="input" placeholder="Nachricht">
-                <button id="submitButton" onclick="updateMessages()">senden</button>
+                <input type="text" id="inputmessage" placeholder="Nachricht">
+                <button id="submitButton" onclick="submitMessage()">senden</button>
             </div>
         </div>
 

@@ -5,7 +5,7 @@ let messages = [
     },
     {
         author: "Dong",
-        message: "Hallo zurck"
+        message: "Hallo zurueck"
     }
 ]
 
@@ -17,11 +17,22 @@ function updateMessages() {
         nachrichtenHTML += `<li class="messages">${message.message} - ${message.author}</li>`
     });
     nachrichtListe.innerHTML += nachrichtenHTML
-
 }
 
 function submitMessage() {
+    message = document.getElementById("inputmessage").value 
+    author = document.getElementById("inputauthor").value 
+    if (author == "" || message == ""){
+        return
+    }
 
+    messages.push({
+        message: message,
+        author: author
+    })
+    updateMessages()
+    let eingabeFeld = document.getElementById("messages")
+    eingabeFeld.value = ""
 }
 
 //document.getElementById("submitButton").onclick = submitMessage;
