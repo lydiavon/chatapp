@@ -30,9 +30,34 @@
     height: 30%;
 }
 
-.messages {
-    flex-grow: 1;
+.nachrichten {
     display: flex;
+}
+
+.message {
+    display: flex;
+}
+
+.text {
+    margin: 4px;
+    padding: 4px;
+    background-color: #F5EFE7;
+    border: none;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 5px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.author {
+    margin: 4px;
+    padding: 4px;
+    background-color:#D8C4B6;
+    border: none;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 5px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: large;
 }
 
 .input{
@@ -66,17 +91,6 @@
 h1 {
     margin: 20px;
     color: rgb(222, 235, 247);
-}
-
-li {
-    margin: 4px;
-    padding: 3px;
-    background-color: rgb(222, 235, 247);
-    border: none;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    border-radius: 5px;
-    font-family:'Times New Roman', Times, serif;
-    font-size: large;
 }
 
 hr {
