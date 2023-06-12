@@ -15,7 +15,7 @@ function updateMessages(messages) {
     nachrichtListe.innerHTML = ""
     let nachrichtenHTML = ""
     messages.forEach(message => {
-        nachrichtenHTML += `<li class="message"><div class='author'><i class="fa-solid fa-user"></i> ${message.author}</div><div class='text'>${message.message}</div></li>`
+        nachrichtenHTML += `<li class="message"><div class='author'><i class="fa-solid fa-user icon"></i>${message.author}</div><div class='text'>${message.message}</div></li>`
     });
     nachrichtListe.innerHTML += nachrichtenHTML
 }
@@ -44,7 +44,7 @@ inputField.addEventListener('propertychange', syncMessages);
 document.getElementById("submitButton").onclick = submitMessage;
 
 function syncMessages() {
-    let messageContainer = document.getElementById("messages")
+    let messageContainer = document.getElementById("nachrichten")
     let messages = messageContainer.childNodes;
     let username = document.getElementById("inputauthor").value
     
@@ -52,9 +52,14 @@ function syncMessages() {
     let author = message.querySelector(".author").textContent;
     let nachricht = message.querySelector(".text").textContent;
     
-    
     if (author == username) {
     message.classList.add("own")
+    }
+
+    /*removeClass vielleicht nicht richtig*/
+
+    if (author != username) {
+    message.classList.removeClass("own")
     }
     
     });

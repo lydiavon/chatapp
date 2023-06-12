@@ -20,6 +20,7 @@
 
 .header input {
     margin: 4px;
+    margin-right: 20px;
     padding: 3px;
     background-color: rgb(222, 235, 247);
     border: none;
@@ -30,12 +31,22 @@
     height: 30%;
 }
 
-.nachrichten {
-    display: flex;
+#nachrichten {
+    overflow: scroll;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
 }
 
 .message {
     display: flex;
+}
+
+.message.own {
+    justify-content: end;
+}
+
+.message.own .author {
+    display: none;
 }
 
 .text {
@@ -58,6 +69,7 @@
     border-radius: 5px;
     font-family:'Times New Roman', Times, serif;
     font-size: large;
+    display: flex;
 }
 
 .input{
@@ -86,6 +98,12 @@
     font-family:'Times New Roman', Times, serif;
     font-size: large;
     flex-basis:15%;
+    transition: all 0.2s ease-in-out;
+}
+
+.input button:hover {
+    background-color: rgb(31, 47, 61);
+    color: white;
 }
 
 h1 {
@@ -93,8 +111,6 @@ h1 {
     color: rgb(222, 235, 247);
 }
 
-hr {
-    height: 1px;
-    background-color: rgb(222, 235, 247);
-    border-color: rrgb(222, 235, 247);
+.icon{
+    padding-right: 4px;
 }
